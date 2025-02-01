@@ -5,13 +5,10 @@ import com.msacomponet.domain.format.Formatter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-
-import org.springframework.format.Printer;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Locale;
 import java.util.StringJoiner;
 
 @Slf4j
@@ -25,7 +22,7 @@ public class OrderPrinter implements Printer<ProductOrder> {
         this.formatter = formatter;
     }
 
-
+    @Override
     public void print(OutputStream os, ProductOrder productOrder) throws IOException {
         StringJoiner joiner = new StringJoiner("\r\n");
         joiner.add(productOrder.getBuyerName());
@@ -35,8 +32,5 @@ public class OrderPrinter implements Printer<ProductOrder> {
         os.write(joiner.toString().getBytes());
     }
 
-    @Override
-    public String print(ProductOrder object, Locale locale) {
-        return "";
-    }
+
 }
