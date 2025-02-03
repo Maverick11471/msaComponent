@@ -16,8 +16,9 @@ public class PriceUnit {
     private final Locale locale;
 
     public PriceUnit(Locale locale) {
-        if (Objects.isNull(locale))
+        if (Objects.isNull(locale)) {
             throw new IllegalArgumentException("locale arg is null");
+        }
 
         this.locale = locale;
     }
@@ -25,13 +26,14 @@ public class PriceUnit {
     public String format(BigDecimal price) {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
         return currencyFormat.format(
-                Optional.ofNullable(price).orElse(BigDecimal.ZERO)
+            Optional.ofNullable(price).orElse(BigDecimal.ZERO)
         );
     }
 
     public void validate() {
-        if (Objects.isNull(locale))
+        if (Objects.isNull(locale)) {
             throw new IllegalStateException("locale is null");
+        }
 
         log.info("locale is [{}]", locale);
     }

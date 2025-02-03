@@ -12,8 +12,9 @@ public class DateFormatter implements Formatter<Date> {
     private SimpleDateFormat sdf;
 
     public DateFormatter(String pattern) {
-        if (StringUtils.isEmpty(pattern))
+        if (StringUtils.isEmpty(pattern)) {
             throw new IllegalArgumentException("Pattern is empty");
+        }
 
         this.sdf = new SimpleDateFormat(pattern);
     }

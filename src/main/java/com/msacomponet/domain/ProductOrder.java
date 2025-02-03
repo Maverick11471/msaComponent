@@ -15,8 +15,9 @@ public class ProductOrder {
 
     public ProductOrder(BigDecimal orderAmount, LocalDateTime orderAt, String buyerName) {
 
-        if (orderAmount == null || orderAt == null || StringUtils.isEmpty(buyerName))
+        if (orderAmount == null || orderAt == null || StringUtils.isEmpty(buyerName)) {
             throw new IllegalArgumentException("One of args is null");
+        }
 
         this.orderAmount = orderAmount;
         this.orderAt = orderAt;
