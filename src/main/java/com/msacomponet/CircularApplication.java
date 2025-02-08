@@ -1,4 +1,4 @@
-package com.msacomponet.validator;
+package com.msacomponet;
 
 
 import com.msacomponet.service.CircularService;

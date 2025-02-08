@@ -1,4 +1,4 @@
-package com.msacomponet.validator;
+package com.msacomponet;
 
 import com.msacomponet.domain.PriceUnit;
 import lombok.extern.slf4j.Slf4j;
