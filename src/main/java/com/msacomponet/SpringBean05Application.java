@@ -1,7 +1,5 @@
 package com.msacomponet;
 
-package com.springtour.example.chapter03;
-
 import java.util.Locale;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -20,16 +18,20 @@ import java.util.concurrent.TimeUnit;
 public class SpringBean05Application {
 
     public static void main(String[] args) throws InterruptedException {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBean05Application.class, args);
-        ThreadPoolTaskExecutor taskExecutor = applicationContext.getBean(ThreadPoolTaskExecutor.class);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(
+            SpringBean05Application.class, args);
+        ThreadPoolTaskExecutor taskExecutor = applicationContext.getBean(
+            ThreadPoolTaskExecutor.class);
         Locale locale = null;
 
         final String dateString = "2020-12-24T23:59:59.-08:00";
         for (int i = 0; i < 100; i++) {
             taskExecutor.submit(() -> {
                 try {
-                    DateFormatter formatter = applicationContext.getBean("singletonDateFormatter", DateFormatter.class);
-                    log.info("Date : {}, hashCode : {}", formatter.parse(dateString, locale), formatter.hashCode());
+                    DateFormatter formatter = applicationContext.getBean("singletonDateFormatter",
+                        DateFormatter.class);
+                    log.info("Date : {}, hashCode : {}", formatter.parse(dateString, locale),
+                        formatter.hashCode());
                 } catch (Exception e) {
                     log.error("error to parse", e);
                 }
