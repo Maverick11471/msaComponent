@@ -1,4 +1,4 @@
-package com.msacomponet;
+package com.msacomponet.chapter03;
 
 import java.util.Locale;
 import lombok.extern.slf4j.Slf4j;

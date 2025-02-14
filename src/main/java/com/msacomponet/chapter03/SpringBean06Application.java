@@ -1,4 +1,4 @@
-package com.msacomponet;
+package com.msacomponet.chapter03;
 
 import com.msacomponet.domain.lifecycle.LifeCycleComponent;
 import com.msacomponet.domain.lifecycle.PrintableBeanPostProcessor;

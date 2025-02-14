@@ -1,4 +1,4 @@
-package com.msacomponet;
+package com.msacomponet.chapter03;
 
 import com.msacomponet.domain.ProductOrder;
 import lombok.extern.slf4j.Slf4j;
