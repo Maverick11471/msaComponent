@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DateFormatter implements Formatter<Date> {
+public class DateFormatter implements com.msacomponet.domain.format.Formatter<Date> {
 
     private SimpleDateFormat sdf;
 

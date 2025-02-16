@@ -1,10 +1,12 @@
-package com.msacomponet.service;
+package com.msacomponet.chapter03.service;
 
 import com.msacomponet.domain.ProductOrder;
 import com.msacomponet.domain.format.Formatter;
+import java.util.Locale;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.format.Printer;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -33,4 +35,8 @@ public class OrderPrinter implements Printer<ProductOrder> {
     }
 
 
+    @Override
+    public String print(ProductOrder object, Locale locale) {
+        return "";
+    }
 }

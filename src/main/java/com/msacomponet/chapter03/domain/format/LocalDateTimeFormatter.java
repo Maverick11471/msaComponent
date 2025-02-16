@@ -7,7 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Component
-public class LocalDateTimeFormatter implements Formatter<LocalDateTime> {
+public class LocalDateTimeFormatter implements
+    com.msacomponet.domain.format.Formatter<LocalDateTime> {
 
     private final DateTimeFormatter formatter =
         DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");

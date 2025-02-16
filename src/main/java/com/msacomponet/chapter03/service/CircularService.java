@@ -2,9 +2,9 @@ package com.msacomponet.service;
 
 public class CircularService {
 
-    private CircularReference circularReference;
+    private com.msacomponet.service.CircularReference circularReference;
 
-    public CircularService(CircularReference circularReference) {
+    public CircularService(com.msacomponet.service.CircularReference circularReference) {
         this.circularReference = circularReference;
     }
 }

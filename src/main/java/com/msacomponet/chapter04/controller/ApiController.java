@@ -1,5 +1,7 @@
 package com.msacomponet.chapter04.controller;
 
+import com.msacomponet.chapter04.domain.Hotel;
+import com.msacomponet.chapter04.domain.HotelSearchService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

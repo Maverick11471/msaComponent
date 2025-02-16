@@ -1,7 +1,7 @@
 package com.msacomponet.chapter03;
 
 
-import com.msacomponet.chapter03.service.CircularService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -11,7 +11,8 @@ public class CircularApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext ctxt = SpringApplication.run(CircularApplication.class);
-        CircularService circularService = ctxt.getBean(CircularService.class);
+        com.msacomponet.service.CircularService circularService = ctxt.getBean(
+            com.msacomponet.service.CircularService.class);
         ctxt.close();
     }
 }
