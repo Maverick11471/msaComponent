@@ -1,6 +1,8 @@
 package com.msacomponet.chapter03;
 
 import com.msacomponet.domain.ProductOrder;
+import jakarta.persistence.criteria.Order;
+import java.util.Locale;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,8 +26,10 @@ public class SpringBean03Application {
         ProductOrder order = new ProductOrder(BigDecimal.valueOf(1000), LocalDateTime.now(),
             "byungboo.kim");
 
+        Locale locale = null;
+
         try (OutputStream os = System.out) {
-            printer.print(os, order);
+            printer.print(os, locale);
         } catch (IOException ioe) {
             log.error("Error to print", ioe);
         }
