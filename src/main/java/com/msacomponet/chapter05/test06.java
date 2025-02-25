@@ -30,6 +30,7 @@ public class test06 {
         }
 
         System.out.print(sb.toString());
+        // 추가
     }
 
 
