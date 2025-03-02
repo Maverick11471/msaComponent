@@ -16,7 +16,7 @@ public class test10 {
 
         Arrays.sort(sticks); // 오름차순 정렬 (a, b, c)
 
-        // 삼각형이 불가능한 경우, 가장 긴 변을 조정
+        // 삼각형이 불가능한 경우, 가장 긴 변을 조정 1
         if (sticks[2] >= sticks[0] + sticks[1]) {
             sticks[2] = sticks[0] + sticks[1] - 1;
         }
